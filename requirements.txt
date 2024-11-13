@@ -1,6 +1,5 @@
 Flask==2.3.3
 joblib==1.3.2
 numpy==1.26.0
-scikit-learn==1.5.2
-pickle5==0.0.12
-gunicorn==20.1.0  # Required for deploying Flask apps on Render
+gunicorn==20.1.0
+pickle5; python_version < "3.8"
