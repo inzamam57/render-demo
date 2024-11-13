@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Fault Detection</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Vehicle Fault Detection System</h1>
+        <p>Enter the vehicle data to detect possible faults and issues.</p>
+    </header>
+
+    <div class="form-container">
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="engine_temperature">Engine Temperature (°C):</label>
+                <input type="text" id="engine_temperature" name="engine_temperature" required>
+            </div>
+            <div class="form-group">
+                <label for="oil_pressure">Oil Pressure (psi):</label>
+                <input type="text" id="oil_pressure" name="oil_pressure" required>
+            </div>
+            <div class="form-group">
+                <label for="tire_pressure">Tire Pressure (psi):</label>
+                <input type="text" id="tire_pressure" name="tire_pressure" required>
+            </div>
+            <div class="form-group">
+                <label for="battery_voltage">Battery Voltage (V):</label>
+                <input type="text" id="battery_voltage" name="battery_voltage" required>
+            </div>
+            <div class="form-group">
+                <label for="vehicle_speed">Vehicle Speed (km/h):</label>
+                <input type="text" id="vehicle_speed" name="vehicle_speed" required>
+            </div>
+            <div class="form-group">
+                <label for="engine_rpm">Engine RPM:</label>
+                <input type="text" id="engine_rpm" name="engine_rpm" required>
+            </div>
+            <div class="form-group">
+                <label for="coolant_level">Coolant Level (Low/Normal/High):</label>
+                <input type="text" id="coolant_level" name="coolant_level" required>
+            </div>
+            <div class="form-group">
+                <label for="brake_status">Brake Status (Good/Needs Maintenance):</label>
+                <input type="text" id="brake_status" name="brake_status" required>
+            </div>
+            <div class="form-group">
+                <label for="transmission_fluid_level">Transmission Fluid Level (Low/Normal/High):</label>
+                <input type="text" id="transmission_fluid_level" name="transmission_fluid_level" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Predict</button>
+        </form>
+    </div>
+
+    <h3 class="prediction-text">{{ prediction_text }}</h3>
+
+    <footer>
+        <p>© 2024 Vehicle Fault Detection System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
